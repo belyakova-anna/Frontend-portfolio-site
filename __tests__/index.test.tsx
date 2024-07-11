@@ -1,28 +1,24 @@
-// __tests__/index.test.tsx
-
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import About from '../pages/index';
 
-describe('About component', () => {
-  test('renders user image with correct alt text', () => {
-    const { getByAltText } = render(<About />);
-
-    const userImageElement = getByAltText('Image');
-    expect(userImageElement).toBeTruthy();
+describe('Компонент About', () => {
+  test('отображает изображение пользователя с корректным alt текстом', () => {
+    render(<About />);
+    const userImageElement = screen.getByAltText('Image');
+    expect(userImageElement).toBeInTheDocument();
   });
 
-  test('renders location info with correct location', () => {
-    const { getByText } = render(<About />);
-
-    const locationInfoElement = getByText('Innopolis, Russia');
-    expect(locationInfoElement).toBeTruthy();
+  test('отображает информацию о местоположении с корректным текстом', () => {
+    render(<About />);
+    const locationInfoElement = screen.getByText('Innopolis, Russia');
+    expect(locationInfoElement).toBeInTheDocument();
   });
 
-  test('renders user info component', () => {
-    const { getByTestId } = render(<About />);
-
-    const userInfoElement = getByTestId('user-info');
-    expect(userInfoElement).toBeTruthy();
+  test('отображает компонент с информацией о пользователе', () => {
+    render(<About />);
+    const userInfoElement = screen.getByTestId('user-info');
+    expect(userInfoElement).toBeInTheDocument();
   });
 });

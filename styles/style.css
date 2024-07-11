@@ -130,15 +130,16 @@ section {
   max-width: 80vw;
 }
 
-.introducing > .image {
+.image {
   width: 30vw;
-  height: 30vw;
+  height: auto;
   flex: 0 0 auto;
   margin-right: 10vw;
 }
 
 .introducing > .image img {
   max-width: 100%;
+  height: auto;
 }
 
 .introducing > .content {
@@ -257,7 +258,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
 }
-.gallery img {
+.photo {
   margin-top: 5vh;
   margin-bottom: 5vh;
   margin-left: 2vw;
@@ -365,8 +366,8 @@ body {
   }
 
   .introducing > .image {
-    width: 40vw;
-    height: 40vw;
+    width: 35vw;
+    height: 35vw;
     margin-right: 5vw;
   }
 
@@ -509,8 +510,8 @@ body {
   }
 
   .introducing > .image {
-    width: 40vw;
-    height: 40vw;
+    width: 35vw;
+    height: 35vw;
     margin-right: 5vw;
   }
 

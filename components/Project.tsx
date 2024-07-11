@@ -18,12 +18,10 @@ const Project: React.FC<ProjectProps> = ({
   imageSrc,
   imageAlt,
 }) => {
-  const imageUrl = typeof imageSrc === 'string' ? imageSrc : imageSrc.src;
-
   return (
     <div className="project">
       <div className="project-content">
-        <a href={link} target="_blank">
+        <a href={link} target="_blank" rel="noopener noreferrer">
           {name}
         </a>
 
@@ -37,11 +35,13 @@ const Project: React.FC<ProjectProps> = ({
         <p>{description}</p>
       </div>
       <a href={link} target="_blank" rel="noopener noreferrer">
-        {typeof imageSrc === 'string' ? (
-          <img src={imageSrc} alt={imageAlt} />
-        ) : (
-          <Image src={imageSrc} alt={imageAlt} className="project-image" />
-        )}
+        <Image
+          src={imageSrc}
+          alt={imageAlt}
+          className="project-image"
+          width={300}
+          height={200}
+        />
       </a>
     </div>
   );

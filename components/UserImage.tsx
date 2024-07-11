@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 interface UserImageProps {
   src: string;
@@ -8,7 +9,7 @@ interface UserImageProps {
 const UserImage: React.FC<UserImageProps> = ({ src, alt }) => {
   return (
     <div className="image">
-      <img src={src} alt={alt} />
+      <Image src={src} alt={alt} width={300} height={300} priority={true} />
     </div>
   );
 };

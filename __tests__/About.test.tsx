@@ -1,13 +1,12 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect'; // Импорт Jest DOM Matchers
-import About from '../pages/index'; // Путь к вашему компоненту
+import '@testing-library/jest-dom/extend-expect';
+import About from '../pages/index';
 
 describe('About component', () => {
   test('renders user image with correct src and alt', () => {
     const { getByAltText } = render(<About />);
 
-    // Проверяем, что компонент UserImage успешно отрендерился с заданным src и alt
     const userImageElement = getByAltText('Image');
     expect(userImageElement).toBeInTheDocument();
     expect(userImageElement.getAttribute('src')).toBe(
@@ -18,7 +17,6 @@ describe('About component', () => {
   test('renders location info with correct location', () => {
     const { getByText } = render(<About />);
 
-    // Проверяем, что компонент LocationInfo успешно отрендерился с заданным текстом местоположения
     const locationInfoElement = getByText('Innopolis, Russia');
     expect(locationInfoElement).toBeInTheDocument();
   });
@@ -26,7 +24,6 @@ describe('About component', () => {
   test('renders user info component', () => {
     const { getByTestId } = render(<About />);
 
-    // Проверяем, что компонент UserInfo отрендерился (мы используем getByTestId, предполагая, что UserInfo возвращает элемент с data-testid)
     const userInfoElement = getByTestId('user-info');
     expect(userInfoElement).toBeInTheDocument();
   });

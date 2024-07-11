@@ -1,3 +1,4 @@
+import React from 'react';
 import { GetServerSideProps } from 'next';
 import Comic from '../components/Comic';
 import { ComicData } from '../interfaces/comicInterface';

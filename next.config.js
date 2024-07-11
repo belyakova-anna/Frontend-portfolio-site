@@ -2,8 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  basePath: '/Front-end-Web-Development-IU',
-  assetPrefix: '/Front-end-Web-Development-IU/',
+  basePath: '/',
+  assetPrefix: '',
   output: 'standalone',
   trailingSlash: true,
   images: {

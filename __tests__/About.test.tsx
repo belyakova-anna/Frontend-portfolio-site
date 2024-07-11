@@ -10,7 +10,7 @@ describe('About component', () => {
     const userImageElement = getByAltText('Image');
     expect(userImageElement).toBeInTheDocument();
     expect(userImageElement.getAttribute('src')).toBe(
-      'https://i.postimg.cc/25YZmKhR/me.png'
+      'https://i.postimg.cc/25YZmKhR/me.png',
     );
   });
 

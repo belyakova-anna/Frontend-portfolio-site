@@ -4,7 +4,6 @@ import LocationInfo from '../components/LocationInfo';
 import UserInfo from '../components/UserInfo';
 import Head from 'next/head';
 
-// kjhkh
 const About: React.FC = () => {
   return (
     <>
